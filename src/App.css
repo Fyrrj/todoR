@@ -156,12 +156,13 @@ main {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+  background-color: #52c883;
 }
 
 main img {
   position: absolute;
-  width: 340px;
-  height: 340px;
+  width: 360px;
+  height: 360px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -205,13 +206,13 @@ main div.tasks-container {
 
 form #task-input {
   width: 280px;
-  height: 50px;
+  height: 45px;
   padding: 10px 20px;
   text-align: center;
   font-size: 2rem;
   font-family: "Raleway";
   font-weight: 300;
-  color: #34be71;
+  color: #49aa8c;
   border: none;
   margin: 0;
   box-shadow: 8px 8px 10px #605b58;
@@ -224,10 +225,13 @@ form #task-input::placeholder {
 form div.checkbox-organiser {
   display: flex;
   flex-direction: row;
-  width: 280px;
+  width: 180px;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
+  background-color: #605b589f;
+  margin: 20px 0;
+  padding: 10px 0;
+  border-radius: 10px;
 }
 
 form label {
@@ -236,24 +240,106 @@ form label {
   color: #fff;
 }
 
-form div.checkbox-organiser span.important-circle {
+span.important-circle {
   display: block;
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: 2px solid #fff;
-  background-color: #f7cb92;
+  margin-top: 3px;
+  background-color: #a35d45;
+  border: 2px solid #f7cb92;
 }
 
 form button#add-task-btn {
   width: 100px;
   height: 40px;
   padding: 10px 20px;
-  margin-top: 20px;
   background-color: #49aa8c;
   border: 2px solid #fff;
   border-radius: 20px;
   color: #fff;
   font-family: "Raleway";
   font-size: 1.4rem;
+}
+
+div.bottom {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+div.task-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #49aa8c;
+  margin-bottom: 4px;
+  font-family: "Raleway";
+  padding: 0 10px;
+  z-index: 1411;
+}
+
+div.task-item span {
+  margin-right: 6px;
+}
+
+div.task-item h3 {
+  padding: 0 10px 0 0;
+  color: #49aa8c;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-top: 2px;
+}
+
+div.task-item label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #a35d45;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+input#done {
+  margin: 0 4px 0 0;
+}
+
+div.date-time-composer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  height: 100%;
+}
+
+p.date-p {
+  color: #52c883;
+  margin-top: 4px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+p.time-p {
+  color: #49aa8c;
+  font-weight: 700;
+  padding-top: 4px;
+  letter-spacing: 1px;
+}
+
+.icon-delete {
+  color: #a35d45;
+  font-size: 1.6rem;
+}
+
+.delete-btn {
+  padding: 6px;
+  border: 1px dotted #a35d45;
+  background-color: #fff;
 }
